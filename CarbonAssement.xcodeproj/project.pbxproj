@@ -3,19 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144298A32AC93E79E30C2B64 /* Pods_CarbonAssementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC993D0B53EF1A9C97FF47D6 /* Pods_CarbonAssementTests.framework */; };
+		20684C3026A5C69600BA9B96 /* FloatingStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20684C2F26A5C69600BA9B96 /* FloatingStar.swift */; };
+		20684C3226A60A7800BA9B96 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20684C3126A60A7800BA9B96 /* MockURLProtocol.swift */; };
+		20684C3426A60B0900BA9B96 /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20684C3326A60B0900BA9B96 /* APIManagerTests.swift */; };
+		20684C3626A626C900BA9B96 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20684C3526A626C900BA9B96 /* TestCoreDataStack.swift */; };
+		20684C3826A6288700BA9B96 /* TestLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20684C3726A6288700BA9B96 /* TestLocalDataSource.swift */; };
+		2094065026A582F400A2419A /* MovieListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094064F26A582F400A2419A /* MovieListItem+CoreDataProperties.swift */; };
+		2094065126A582F400A2419A /* MovieListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094064E26A582F400A2419A /* MovieListItem+CoreDataClass.swift */; };
+		209421862699A65F002983AE /* MovieResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209421852699A65F002983AE /* MovieResult.swift */; };
+		209421892699A6D8002983AE /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209421882699A6D8002983AE /* CustomViews.swift */; };
+		2094218B2699A990002983AE /* FavouriteMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094218A2699A990002983AE /* FavouriteMovieViewController.swift */; };
+		2094218D2699A9B3002983AE /* SingleMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094218C2699A9B3002983AE /* SingleMovieViewController.swift */; };
+		209421902699AAF3002983AE /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094218F2699AAF3002983AE /* MovieViewModel.swift */; };
+		209421932699AB24002983AE /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209421922699AB24002983AE /* RemoteDataSource.swift */; };
+		209421952699AB2F002983AE /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209421942699AB2F002983AE /* LocalDataSource.swift */; };
 		20EC290A269999F7002A5CE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC2909269999F7002A5CE6 /* AppDelegate.swift */; };
 		20EC290C269999F7002A5CE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC290B269999F7002A5CE6 /* SceneDelegate.swift */; };
-		20EC290E269999F7002A5CE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC290D269999F7002A5CE6 /* ViewController.swift */; };
+		20EC290E269999F7002A5CE6 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC290D269999F7002A5CE6 /* MovieViewController.swift */; };
 		20EC2911269999F7002A5CE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20EC290F269999F7002A5CE6 /* Main.storyboard */; };
 		20EC2914269999F7002A5CE6 /* CarbonAssement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20EC2912269999F7002A5CE6 /* CarbonAssement.xcdatamodeld */; };
 		20EC2916269999FB002A5CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20EC2915269999FB002A5CE6 /* Assets.xcassets */; };
 		20EC2919269999FB002A5CE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20EC2917269999FB002A5CE6 /* LaunchScreen.storyboard */; };
 		20EC2924269999FB002A5CE6 /* CarbonAssementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC2923269999FB002A5CE6 /* CarbonAssementTests.swift */; };
 		20EC292F269999FC002A5CE6 /* CarbonAssementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC292E269999FC002A5CE6 /* CarbonAssementUITests.swift */; };
+		20EC294026999A47002A5CE6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC293F26999A47002A5CE6 /* APIManager.swift */; };
+		20EC294326999C0E002A5CE6 /* MovieCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC294126999C0E002A5CE6 /* MovieCells.swift */; };
+		20EC294426999C0E002A5CE6 /* MovieCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20EC294226999C0E002A5CE6 /* MovieCells.xib */; };
+		8CC5BDACA3FC647AC2AA5A48 /* Pods_CarbonAssement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35FD6477DD0CD5F2EE36663C /* Pods_CarbonAssement.framework */; };
+		B3E9918B7641EC06EDF8800A /* Pods_CarbonAssement_CarbonAssementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FB62C63F8888F88CE28249 /* Pods_CarbonAssement_CarbonAssementUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +56,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20684C2F26A5C69600BA9B96 /* FloatingStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingStar.swift; sourceTree = "<group>"; };
+		20684C3126A60A7800BA9B96 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		20684C3326A60B0900BA9B96 /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
+		20684C3526A626C900BA9B96 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		20684C3726A6288700BA9B96 /* TestLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocalDataSource.swift; sourceTree = "<group>"; };
+		2094064E26A582F400A2419A /* MovieListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MovieListItem+CoreDataClass.swift"; path = "/Users/anthonyudo/Desktop/CarbonAssement/CarbonAssement/Model/MovieListItem+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		2094064F26A582F400A2419A /* MovieListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MovieListItem+CoreDataProperties.swift"; path = "/Users/anthonyudo/Desktop/CarbonAssement/CarbonAssement/Model/MovieListItem+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		209421852699A65F002983AE /* MovieResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResult.swift; sourceTree = "<group>"; };
+		209421882699A6D8002983AE /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		2094218A2699A990002983AE /* FavouriteMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteMovieViewController.swift; sourceTree = "<group>"; };
+		2094218C2699A9B3002983AE /* SingleMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMovieViewController.swift; sourceTree = "<group>"; };
+		2094218F2699AAF3002983AE /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		209421922699AB24002983AE /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
+		209421942699AB2F002983AE /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		20EC2906269999F7002A5CE6 /* CarbonAssement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonAssement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20EC2909269999F7002A5CE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20EC290B269999F7002A5CE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		20EC290D269999F7002A5CE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		20EC290D269999F7002A5CE6 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		20EC2910269999F7002A5CE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20EC2913269999F7002A5CE6 /* CarbonAssement.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarbonAssement.xcdatamodel; sourceTree = "<group>"; };
 		20EC2915269999FB002A5CE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +85,18 @@
 		20EC292A269999FC002A5CE6 /* CarbonAssementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarbonAssementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20EC292E269999FC002A5CE6 /* CarbonAssementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonAssementUITests.swift; sourceTree = "<group>"; };
 		20EC2930269999FC002A5CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20EC293F26999A47002A5CE6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		20EC294126999C0E002A5CE6 /* MovieCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCells.swift; sourceTree = "<group>"; };
+		20EC294226999C0E002A5CE6 /* MovieCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCells.xib; sourceTree = "<group>"; };
+		2EF84DA808BC851E7D212C6C /* Pods-CarbonAssement-CarbonAssementUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonAssement-CarbonAssementUITests.release.xcconfig"; path = "Target Support Files/Pods-CarbonAssement-CarbonAssementUITests/Pods-CarbonAssement-CarbonAssementUITests.release.xcconfig"; sourceTree = "<group>"; };
+		35FD6477DD0CD5F2EE36663C /* Pods_CarbonAssement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonAssement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FB62C63F8888F88CE28249 /* Pods_CarbonAssement_CarbonAssementUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonAssement_CarbonAssementUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6074A59D1280FE03FDED9B78 /* Pods-CarbonAssement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonAssement.release.xcconfig"; path = "Target Support Files/Pods-CarbonAssement/Pods-CarbonAssement.release.xcconfig"; sourceTree = "<group>"; };
+		64DDAEA17720ADF6C7F5418B /* Pods-CarbonAssement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonAssement.debug.xcconfig"; path = "Target Support Files/Pods-CarbonAssement/Pods-CarbonAssement.debug.xcconfig"; sourceTree = "<group>"; };
+		ADEC136AD2FC7D12A72960C9 /* Pods-CarbonAssementTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonAssementTests.debug.xcconfig"; path = "Target Support Files/Pods-CarbonAssementTests/Pods-CarbonAssementTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C22903B52E28261834E98B7B /* Pods-CarbonAssementTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonAssementTests.release.xcconfig"; path = "Target Support Files/Pods-CarbonAssementTests/Pods-CarbonAssementTests.release.xcconfig"; sourceTree = "<group>"; };
+		F0968542F29BA36E408EFF87 /* Pods-CarbonAssement-CarbonAssementUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonAssement-CarbonAssementUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarbonAssement-CarbonAssementUITests/Pods-CarbonAssement-CarbonAssementUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC993D0B53EF1A9C97FF47D6 /* Pods_CarbonAssementTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonAssementTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC5BDACA3FC647AC2AA5A48 /* Pods_CarbonAssement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144298A32AC93E79E30C2B64 /* Pods_CarbonAssementTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +120,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E9918B7641EC06EDF8800A /* Pods_CarbonAssement_CarbonAssementUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		209421842699A64E002983AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2094064E26A582F400A2419A /* MovieListItem+CoreDataClass.swift */,
+				2094064F26A582F400A2419A /* MovieListItem+CoreDataProperties.swift */,
+				209421852699A65F002983AE /* MovieResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		209421872699A6C9002983AE /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				209421882699A6D8002983AE /* CustomViews.swift */,
+				20EC294126999C0E002A5CE6 /* MovieCells.swift */,
+				20684C2F26A5C69600BA9B96 /* FloatingStar.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		2094218E2699AADE002983AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2094218F2699AAF3002983AE /* MovieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		209421912699AB13002983AE /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				209421922699AB24002983AE /* RemoteDataSource.swift */,
+				209421942699AB2F002983AE /* LocalDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		20EC28FD269999F6002A5CE6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +171,8 @@
 				20EC2922269999FB002A5CE6 /* CarbonAssementTests */,
 				20EC292D269999FC002A5CE6 /* CarbonAssementUITests */,
 				20EC2907269999F7002A5CE6 /* Products */,
+				38C7EEAFE6FB0D447819D8E1 /* Pods */,
+				DE13B9B410D37070E011B402 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,12 +189,16 @@
 		20EC2908269999F7002A5CE6 /* CarbonAssement */ = {
 			isa = PBXGroup;
 			children = (
+				20EC293E26999A26002A5CE6 /* NetworkManager */,
+				209421912699AB13002983AE /* DataSource */,
+				2094218E2699AADE002983AE /* ViewModel */,
+				209421872699A6C9002983AE /* CustomViews */,
+				209421842699A64E002983AE /* Model */,
+				20EC293D26999A18002A5CE6 /* ViewControllers */,
+				20EC293C26999A11002A5CE6 /* Views */,
 				20EC2909269999F7002A5CE6 /* AppDelegate.swift */,
 				20EC290B269999F7002A5CE6 /* SceneDelegate.swift */,
-				20EC290D269999F7002A5CE6 /* ViewController.swift */,
-				20EC290F269999F7002A5CE6 /* Main.storyboard */,
 				20EC2915269999FB002A5CE6 /* Assets.xcassets */,
-				20EC2917269999FB002A5CE6 /* LaunchScreen.storyboard */,
 				20EC291A269999FB002A5CE6 /* Info.plist */,
 				20EC2912269999F7002A5CE6 /* CarbonAssement.xcdatamodeld */,
 			);
@@ -118,6 +210,10 @@
 			children = (
 				20EC2923269999FB002A5CE6 /* CarbonAssementTests.swift */,
 				20EC2925269999FB002A5CE6 /* Info.plist */,
+				20684C3126A60A7800BA9B96 /* MockURLProtocol.swift */,
+				20684C3326A60B0900BA9B96 /* APIManagerTests.swift */,
+				20684C3526A626C900BA9B96 /* TestCoreDataStack.swift */,
+				20684C3726A6288700BA9B96 /* TestLocalDataSource.swift */,
 			);
 			path = CarbonAssementTests;
 			sourceTree = "<group>";
@@ -131,6 +227,57 @@
 			path = CarbonAssementUITests;
 			sourceTree = "<group>";
 		};
+		20EC293C26999A11002A5CE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20EC290F269999F7002A5CE6 /* Main.storyboard */,
+				20EC2917269999FB002A5CE6 /* LaunchScreen.storyboard */,
+				20EC294226999C0E002A5CE6 /* MovieCells.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		20EC293D26999A18002A5CE6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				20EC290D269999F7002A5CE6 /* MovieViewController.swift */,
+				2094218A2699A990002983AE /* FavouriteMovieViewController.swift */,
+				2094218C2699A9B3002983AE /* SingleMovieViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		20EC293E26999A26002A5CE6 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				20EC293F26999A47002A5CE6 /* APIManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		38C7EEAFE6FB0D447819D8E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64DDAEA17720ADF6C7F5418B /* Pods-CarbonAssement.debug.xcconfig */,
+				6074A59D1280FE03FDED9B78 /* Pods-CarbonAssement.release.xcconfig */,
+				F0968542F29BA36E408EFF87 /* Pods-CarbonAssement-CarbonAssementUITests.debug.xcconfig */,
+				2EF84DA808BC851E7D212C6C /* Pods-CarbonAssement-CarbonAssementUITests.release.xcconfig */,
+				ADEC136AD2FC7D12A72960C9 /* Pods-CarbonAssementTests.debug.xcconfig */,
+				C22903B52E28261834E98B7B /* Pods-CarbonAssementTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE13B9B410D37070E011B402 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35FD6477DD0CD5F2EE36663C /* Pods_CarbonAssement.framework */,
+				53FB62C63F8888F88CE28249 /* Pods_CarbonAssement_CarbonAssementUITests.framework */,
+				FC993D0B53EF1A9C97FF47D6 /* Pods_CarbonAssementTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20EC2933269999FC002A5CE6 /* Build configuration list for PBXNativeTarget "CarbonAssement" */;
 			buildPhases = (
+				D96AA8CC46D7C8B517340DA3 /* [CP] Check Pods Manifest.lock */,
 				20EC2902269999F7002A5CE6 /* Sources */,
 				20EC2903269999F7002A5CE6 /* Frameworks */,
 				20EC2904269999F7002A5CE6 /* Resources */,
+				13D3D438E531EFFD1C97C83C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +304,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20EC2936269999FC002A5CE6 /* Build configuration list for PBXNativeTarget "CarbonAssementTests" */;
 			buildPhases = (
+				51F5576A7937DCCF4A591BB1 /* [CP] Check Pods Manifest.lock */,
 				20EC291B269999FB002A5CE6 /* Sources */,
 				20EC291C269999FB002A5CE6 /* Frameworks */,
 				20EC291D269999FB002A5CE6 /* Resources */,
@@ -173,9 +323,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20EC2939269999FC002A5CE6 /* Build configuration list for PBXNativeTarget "CarbonAssementUITests" */;
 			buildPhases = (
+				5A204431DFCD4278CC4527EB /* [CP] Check Pods Manifest.lock */,
 				20EC2926269999FC002A5CE6 /* Sources */,
 				20EC2927269999FC002A5CE6 /* Frameworks */,
 				20EC2928269999FC002A5CE6 /* Resources */,
+				F3B7873989F4F529FA962E88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +388,7 @@
 			files = (
 				20EC2919269999FB002A5CE6 /* LaunchScreen.storyboard in Resources */,
 				20EC2916269999FB002A5CE6 /* Assets.xcassets in Resources */,
+				20EC294426999C0E002A5CE6 /* MovieCells.xib in Resources */,
 				20EC2911269999F7002A5CE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,15 +409,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13D3D438E531EFFD1C97C83C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarbonAssement/Pods-CarbonAssement-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarbonAssement/Pods-CarbonAssement-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarbonAssement/Pods-CarbonAssement-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51F5576A7937DCCF4A591BB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarbonAssementTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A204431DFCD4278CC4527EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarbonAssement-CarbonAssementUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D96AA8CC46D7C8B517340DA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarbonAssement-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3B7873989F4F529FA962E88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarbonAssement-CarbonAssementUITests/Pods-CarbonAssement-CarbonAssementUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarbonAssement-CarbonAssementUITests/Pods-CarbonAssement-CarbonAssementUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarbonAssement-CarbonAssementUITests/Pods-CarbonAssement-CarbonAssementUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20EC2902269999F7002A5CE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209421862699A65F002983AE /* MovieResult.swift in Sources */,
 				20EC2914269999F7002A5CE6 /* CarbonAssement.xcdatamodeld in Sources */,
-				20EC290E269999F7002A5CE6 /* ViewController.swift in Sources */,
+				20EC290E269999F7002A5CE6 /* MovieViewController.swift in Sources */,
+				209421902699AAF3002983AE /* MovieViewModel.swift in Sources */,
+				2094065126A582F400A2419A /* MovieListItem+CoreDataClass.swift in Sources */,
+				209421932699AB24002983AE /* RemoteDataSource.swift in Sources */,
+				2094065026A582F400A2419A /* MovieListItem+CoreDataProperties.swift in Sources */,
 				20EC290A269999F7002A5CE6 /* AppDelegate.swift in Sources */,
+				20684C3026A5C69600BA9B96 /* FloatingStar.swift in Sources */,
 				20EC290C269999F7002A5CE6 /* SceneDelegate.swift in Sources */,
+				2094218D2699A9B3002983AE /* SingleMovieViewController.swift in Sources */,
+				20EC294326999C0E002A5CE6 /* MovieCells.swift in Sources */,
+				209421892699A6D8002983AE /* CustomViews.swift in Sources */,
+				20EC294026999A47002A5CE6 /* APIManager.swift in Sources */,
+				209421952699AB2F002983AE /* LocalDataSource.swift in Sources */,
+				2094218B2699A990002983AE /* FavouriteMovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +540,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20684C3826A6288700BA9B96 /* TestLocalDataSource.swift in Sources */,
 				20EC2924269999FB002A5CE6 /* CarbonAssementTests.swift in Sources */,
+				20684C3226A60A7800BA9B96 /* MockURLProtocol.swift in Sources */,
+				20684C3426A60B0900BA9B96 /* APIManagerTests.swift in Sources */,
+				20684C3626A626C900BA9B96 /* TestCoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +709,7 @@
 		};
 		20EC2934269999FC002A5CE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64DDAEA17720ADF6C7F5418B /* Pods-CarbonAssement.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +729,7 @@
 		};
 		20EC2935269999FC002A5CE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6074A59D1280FE03FDED9B78 /* Pods-CarbonAssement.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +749,7 @@
 		};
 		20EC2937269999FC002A5CE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADEC136AD2FC7D12A72960C9 /* Pods-CarbonAssementTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +772,7 @@
 		};
 		20EC2938269999FC002A5CE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C22903B52E28261834E98B7B /* Pods-CarbonAssementTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +795,7 @@
 		};
 		20EC293A269999FC002A5CE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0968542F29BA36E408EFF87 /* Pods-CarbonAssement-CarbonAssementUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +816,7 @@
 		};
 		20EC293B269999FC002A5CE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EF84DA808BC851E7D212C6C /* Pods-CarbonAssement-CarbonAssementUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCells" id="mRy-C3-tcu" customClass="MovieCells" customModule="CarbonAssement" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="370"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="153" height="370"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Nt-Rx-9AT">
+                        <rect key="frame" x="0.0" y="0.0" width="153" height="235"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="235" id="4pS-gM-6hL"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="8Nr-PC-3Bq">
+                        <rect key="frame" x="0.0" y="240" width="148" height="102"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Movie name " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rf-ad-1Rf">
+                                <rect key="frame" x="0.0" y="0.0" width="87" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQm-R8-mIT">
+                                <rect key="frame" x="0.0" y="18" width="85" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kDf-ut-XZO">
+                                <rect key="frame" x="0.0" y="35" width="48.5" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-cv-xxj" customClass="FloatRatingView" customModule="Movie_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="52" width="85" height="50"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="TYW-ur-qeJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="VNj-7l-TiF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="StarEmpty"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="StarFull"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="OHv-J3-hRF"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8Nr-PC-3Bq" secondAttribute="trailing" constant="5" id="JaD-cF-5Z1"/>
+                <constraint firstItem="8Nr-PC-3Bq" firstAttribute="top" secondItem="1Nt-Rx-9AT" secondAttribute="bottom" constant="5" id="Lkc-5E-1pg"/>
+                <constraint firstItem="1Nt-Rx-9AT" firstAttribute="top" secondItem="mRy-C3-tcu" secondAttribute="top" id="TVT-Kp-z3i"/>
+                <constraint firstAttribute="trailing" secondItem="1Nt-Rx-9AT" secondAttribute="trailing" id="fyp-2K-zrk"/>
+                <constraint firstItem="1Nt-Rx-9AT" firstAttribute="leading" secondItem="mRy-C3-tcu" secondAttribute="leading" id="hGv-dQ-XoC"/>
+                <constraint firstItem="8Nr-PC-3Bq" firstAttribute="leading" secondItem="mRy-C3-tcu" secondAttribute="leading" id="ma5-4r-icd"/>
+            </constraints>
+            <size key="customSize" width="153" height="326"/>
+            <connections>
+                <outlet property="moveImage" destination="1Nt-Rx-9AT" id="j8l-gb-fqi"/>
+                <outlet property="ratingStar" destination="tdl-cv-xxj" id="PtR-dJ-i11"/>
+                <outlet property="ratings" destination="kDf-ut-XZO" id="2ZT-GB-6Qr"/>
+                <outlet property="releaseDate" destination="rQm-R8-mIT" id="vpo-3i-H07"/>
+                <outlet property="textLabel" destination="5Rf-ad-1Rf" id="h2Q-WE-dNh"/>
+            </connections>
+            <point key="canvasLocation" x="-743" y="170"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="StarEmpty" width="22" height="22"/>
+        <image name="StarFull" width="22" height="22"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

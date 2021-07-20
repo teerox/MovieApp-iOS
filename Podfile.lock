@@ -1,0 +1,34 @@
+PODS:
+  - FloatRatingView (4.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SnackBar.swift (0.1.0):
+    - SnapKit
+  - SnapKit (5.0.1)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - FloatRatingView (~> 4)
+  - SDWebImage (~> 5.0)
+  - SnackBar.swift
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - FloatRatingView
+    - SDWebImage
+    - SnackBar.swift
+    - SnapKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  FloatRatingView: bb6bdddfbeec51b1d387b4bd50abc27b4dfccd48
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SnackBar.swift: 79ea4df13ea9e6633137dd6acbd490534d26440d
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 782cf343c0e399337d58b1550232e5f8031e1645
+
+COCOAPODS: 1.10.1
