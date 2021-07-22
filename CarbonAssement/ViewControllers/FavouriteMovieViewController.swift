@@ -10,7 +10,7 @@ import SDWebImage
 import os.log
 
 class FavouriteMovieViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
@@ -40,37 +40,43 @@ class FavouriteMovieViewController: UIViewController {
             
         }
     }
-
+    
     
     override func viewWillAppear(_ animated: Bool) {
         
-       getMovies()
+        getMovies()
     }
     
     
     //Set up collection View
     private func setupCollectionView() {
-      collectionView.delegate = self
-      collectionView.dataSource = self
-      let nib = UINib(nibName: "MovieCells", bundle: nil)
-      collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        let nib = UINib(nibName: "MovieCells", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "favmovieselected"{
             let item = sender as! MovieListItem
-             let vc = segue.destination as! SingleMovieViewController
+            let vc = segue.destination as! SingleMovieViewController
             vc.favValue = item
         }
     }
-      
+    
     
     //Set up collection View Item Size
     private func setupCollectionViewItemSize() {
-      let customLayout = CustomLayout()
+        let customLayout = CustomLayout()
         customLayout.delegate = self
-      collectionView.collectionViewLayout = customLayout
+        if UIDevice().userInterfaceIdiom == .phone
+        {
+            customLayout.numberOfColumns = 2
+        }else if UIDevice().userInterfaceIdiom == .pad{
+            customLayout.numberOfColumns = 3
+        }
+        collectionView.collectionViewLayout = customLayout
     }
     
     //get movies
@@ -90,7 +96,7 @@ class FavouriteMovieViewController: UIViewController {
         }
     }
     
-
+    
 }
 //MARK: - CollectionView
 extension FavouriteMovieViewController:UICollectionViewDelegate,UICollectionViewDataSource{
@@ -104,7 +110,7 @@ extension FavouriteMovieViewController:UICollectionViewDelegate,UICollectionView
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCells", for: indexPath) as! MovieCells
         if let res = a{
             
-           let IMAGE_BASE_URL =  "https://image.tmdb.org/t/p/original" + res
+            let IMAGE_BASE_URL =  "https://image.tmdb.org/t/p/original" + res
             cell.moveImage.sd_setImage(with: URL(string: IMAGE_BASE_URL), placeholderImage: UIImage(named: ""))
         }
         cell.textLabel.text = result[indexPath.row].title
@@ -116,7 +122,7 @@ extension FavouriteMovieViewController:UICollectionViewDelegate,UICollectionView
         return cell
     }
     
-  
+    
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -126,15 +132,243 @@ extension FavouriteMovieViewController:UICollectionViewDelegate,UICollectionView
         performSegue(withIdentifier: "favmovieselected", sender: item)
     }
     
-    
-    
-    
 }
 
 
-//MARK: - Custom Image
+////MARK: - Custom Image
 extension FavouriteMovieViewController: CustomLayoutDelegate {
-  func collectionView(_ collectionView: UICollectionView, sizeOfPhotoAtIndexPath indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 160, height: 280) 
-  }
+    
+    func collectionView(_ collectionView: UICollectionView, sizeOfPhotoAtIndexPath indexPath: IndexPath) -> CGSize {
+        
+        if UIDevice().userInterfaceIdiom == .phone
+        {
+            switch UIScreen.main.nativeBounds.height
+            {
+            case 480:
+                let cellSize = CGSize(width: (collectionView.bounds.width - (3 * 10))/2, height: 350)
+                return cellSize
+            case 960:
+                let cellSize = CGSize(width: (collectionView.bounds.width - (3 * 10))/2, height: 350)
+                return cellSize
+            case 1136:
+                let cellSize = CGSize(width: (collectionView.bounds.width - (3 * 10))/2, height: 350)
+                return cellSize
+            case 1334:
+                let cellSize = CGSize(width: (collectionView.bounds.width - (3 * 10))/2, height: 350)
+                return cellSize
+            case 2208:
+                let cellSize = CGSize(width: (collectionView.bounds.width - (3 * 10))/2, height: 350)
+                return cellSize
+            default:
+                let cellSize = CGSize(width: (collectionView.bounds.width - (3 * 10))/2, height: 350)
+                return cellSize
+            }
+        }
+        
+        else if UIDevice().userInterfaceIdiom == .pad
+        {
+            if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad &&
+                    (UIScreen.main.bounds.size.height == 1366 || UIScreen.main.bounds.size.width == 1366))
+            {
+                
+                
+                let cellSize = CGSize(width: (((collectionView.bounds.width - 30)/2)/2) - 50, height: 200)
+                return cellSize
+            }
+            else if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad &&
+                        (UIScreen.main.bounds.size.height == 1024 || UIScreen.main.bounds.size.width == 1024))
+            {
+                
+                
+                let cellSize = CGSize(width: (((collectionView.bounds.width - 30)/2)/2) - 50, height: 200)
+                return cellSize
+            }
+            else
+            {
+                
+                let cellSize = CGSize(width: (((collectionView.bounds.width - 30)/2)/2) - 50, height: 200)
+                return cellSize
+            }
+        }
+        
+        else{
+            
+            let cellSize = CGSize(width: (((collectionView.bounds.width - 30)/2)/2) - 50, height: 200)
+            return cellSize
+        }
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        let sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return sectionInset
+    }
+    
+    
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft {
+            let cellSize = CGSize(width: 160, height: 350)
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .vertical //.horizontal
+            layout.itemSize = cellSize
+            layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+            layout.minimumLineSpacing = 1.0
+            layout.minimumInteritemSpacing = 1.0
+            collectionView.setCollectionViewLayout(layout, animated: true)
+            collectionView.reloadData()
+        }
+        
+        else if UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+            
+            let cellSize = CGSize(width: 160, height: 350)
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .vertical //.horizontal
+            layout.itemSize = cellSize
+            layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+            layout.minimumLineSpacing = 1.0
+            layout.minimumInteritemSpacing = 1.0
+            collectionView.setCollectionViewLayout(layout, animated: true)
+            collectionView.reloadData()
+        }
+        else {
+            
+            if UIDevice().userInterfaceIdiom == .phone
+            {
+                switch UIScreen.main.nativeBounds.height
+                {
+                case 480:
+                    print("iPhone Classic")
+                    let layout = UICollectionViewFlowLayout()
+                    layout.scrollDirection = .vertical //.horizontal
+                    
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    print("second::",(collectionView.bounds.width - (3 * 10))/2)
+                    print("third::",((collectionView.bounds.width - (3 * 10))/2)/2)
+                    layout.itemSize = CGSize(width: ((collectionView.bounds.width - (3 * 10))/2)/2, height: 350)
+                    layout.minimumInteritemSpacing = 1.0
+                    layout.minimumLineSpacing = 10.0
+                    collectionView.setCollectionViewLayout(layout, animated: true)
+                    collectionView.reloadData()
+                case 960:
+                    print("iPhone 4 or 4S")
+                    let layout = UICollectionViewFlowLayout()
+                    layout.scrollDirection = .vertical //.horizontal
+                    
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    print("second::",(collectionView.bounds.width - (3 * 10))/2)
+                    print("third::",((collectionView.bounds.width - (3 * 10))/2)/2)
+                    layout.itemSize = CGSize(width: ((collectionView.bounds.width - (3 * 10))/2)/2, height: 350)
+                    layout.minimumInteritemSpacing = 1.0
+                    layout.minimumLineSpacing = 10.0
+                    collectionView.setCollectionViewLayout(layout, animated: true)
+                    collectionView.reloadData()
+                case 1136:
+                    print("iPhone 5 or 5S or 5C")
+                    let layout = UICollectionViewFlowLayout()
+                    layout.scrollDirection = .vertical //.horizontal
+                    
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    print("second::",(collectionView.bounds.width - (3 * 10))/2)
+                    print("third::",((collectionView.bounds.width - (3 * 10))/2)/2)
+                    layout.itemSize = CGSize(width: ((collectionView.bounds.width - (3 * 10))/2)/2, height: 350)
+                    layout.minimumInteritemSpacing = 1.0
+                    layout.minimumLineSpacing = 10.0
+                    collectionView.setCollectionViewLayout(layout, animated: true)
+                    collectionView.reloadData()
+                case 1334:
+                    print("iPhone 6 or 6S")
+                    let layout = UICollectionViewFlowLayout()
+                    layout.scrollDirection = .vertical //.horizontal
+                    
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    print("second::",(collectionView.bounds.width - (3 * 10))/2)
+                    print("third::",((collectionView.bounds.width - (3 * 10))/2)/2)
+                    layout.itemSize = CGSize(width: ((collectionView.bounds.width - (3 * 10))/2)/2, height: 350)
+                    layout.minimumInteritemSpacing = 1.0
+                    layout.minimumLineSpacing = 10.0
+                    collectionView.setCollectionViewLayout(layout, animated: true)
+                    collectionView.reloadData()
+                case 2208:
+                    print("iPhone 6+ or 6S+")
+                    let layout = UICollectionViewFlowLayout()
+                    layout.scrollDirection = .vertical //.horizontal
+                    
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    print("second::",(collectionView.bounds.width - (3 * 10))/2)
+                    print("third::",((collectionView.bounds.width - (3 * 10))/2)/2)
+                    layout.itemSize = CGSize(width: ((collectionView.bounds.width - (3 * 10))/2)/2, height: 350)
+                    layout.minimumInteritemSpacing = 1.0
+                    layout.minimumLineSpacing = 10.0
+                    collectionView.setCollectionViewLayout(layout, animated: true)
+                    collectionView.reloadData()
+                default:
+                    print("unknown")
+                    let layout = UICollectionViewFlowLayout()
+                    layout.scrollDirection = .vertical //.horizontal
+                    
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    print("second::",(collectionView.bounds.width - (3 * 10))/2)
+                    print("third::",((collectionView.bounds.width - (3 * 10))/2)/2)
+                    layout.itemSize = CGSize(width: ((collectionView.bounds.width - (3 * 10))/2)/2, height: 350)
+                    layout.minimumInteritemSpacing = 1.0
+                    layout.minimumLineSpacing = 10.0
+                    collectionView.setCollectionViewLayout(layout, animated: true)
+                    collectionView.reloadData()
+                }
+            }
+            
+            if UIDevice().userInterfaceIdiom == .pad
+            {
+                if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad &&
+                        (UIScreen.main.bounds.size.height == 1366 || UIScreen.main.bounds.size.width == 1366))
+                {
+                    let layout = UICollectionViewFlowLayout()
+                    layout.scrollDirection = .vertical //.horizontal
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    layout.itemSize = CGSize(width: (((collectionView.bounds.width - (3 * 10))/2)/2)-50, height: 350)
+                    layout.minimumInteritemSpacing = 1.0
+                    layout.minimumLineSpacing = 10.0
+                    collectionView.setCollectionViewLayout(layout, animated: true)
+                    collectionView.reloadData()
+                }
+                else if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad &&
+                            (UIScreen.main.bounds.size.height == 1024 || UIScreen.main.bounds.size.width == 1024))
+                {
+                    let layout = UICollectionViewFlowLayout()
+                    layout.scrollDirection = .vertical //.horizontal
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    layout.itemSize = CGSize(width: (((collectionView.bounds.width - (3 * 10))/2)/2)-50, height: 350)
+                    layout.minimumInteritemSpacing = 1.0
+                    layout.minimumLineSpacing = 10.0
+                    collectionView.setCollectionViewLayout(layout, animated: true)
+                    collectionView.reloadData()
+                }
+                else
+                {
+                    let vad = (((collectionView.bounds.width - 30)/2)/2) - 50
+                    print(vad)
+                    let layout = UICollectionViewFlowLayout()
+                    layout.scrollDirection = .vertical //.horizontal
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    layout.itemSize = CGSize(width: vad, height: 350)
+                    layout.minimumInteritemSpacing = 1.0
+                    layout.minimumLineSpacing = 10.0
+                    collectionView.setCollectionViewLayout(layout, animated: true)
+                    collectionView.reloadData()
+                }
+            }
+            
+            
+            
+        }
+    }
 }
